@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+
+
 public class Uzytkownik {
 	
 	String Imie,Nazwisko,Ksywa;
@@ -87,7 +89,22 @@ public class Uzytkownik {
 				break;}
 		return v;
 	}
-					
+				
+	
+	List<Gra> SzukajGier (String platforma){
+		List<Gra> gierki = new ArrayList<Gra>();
+		for (Gra gra : gry)
+			if(gra.getPlatforma()==(platforma)){
+				gierki.add(gra);
+			}
+			return gierki;	
+		
+	}
+	
+	void UsunGry(List<Gra> listagier){
+		for (Gra g : listagier)
+			gry.remove(g);
+	}
 	
 	public void UsunGre(String tyt){
 		gry.remove(SzukajGra(tyt));
@@ -141,6 +158,21 @@ public class Uzytkownik {
 		return a;
 	}
 	
+	
+	List<Audio> SzukajPlyt (String wykonawca){
+		List<Audio> plytki = new ArrayList<Audio>();
+		for (Audio f : audio)
+			if(f.Wykonawca==wykonawca){
+				plytki.add(f);
+			}
+			return plytki;	
+		
+	}
+	
+	void UsunPlytki(List<Audio> listaplyt){
+		 for (Audio g : listaplyt)
+			audio.remove(g);
+	}
 	public void UsunAudio(int j) {
 		audio.remove(SzukajAudio(j));
 		
@@ -190,11 +222,27 @@ public class Uzytkownik {
 		return u;
 	}
 	
+	List<Komiks> SzukajKomiksow(String autor){
+		List<Komiks> komixy = new ArrayList<Komiks>();
+		for (Komiks kk : komixy)
+			if(kk.Autor==autor){
+				komixy.add(kk);
+			}
+			return komixy;	
+		
+	}
+	
+	void UsunKomiksy(List<Komiks> listakomiksow){
+		 for (Komiks kkk : listakomiksow)
+			komiks.remove(kkk);
+	}
+	
 	public void UsunKomiks(int dd) {
 		komiks.remove(SzukajKomiks(dd));
 		
-	}
-public void UsunKomiks(String ddd) {
+}
+
+	public void UsunKomiks(String ddd) {
 	komiks.remove(SzukajKomiks(ddd));
 	
 }

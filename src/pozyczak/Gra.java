@@ -23,6 +23,12 @@ public class Gra {
 
 	
 
+	public String getPlatforma() {
+		return Platforma;
+	}
+
+
+
 	void WypiszGre(){
 		System.out.println("ID Gry:"+GraId+", Tytul: "+Tytul+" , Platforma: "+Platforma);
 	}

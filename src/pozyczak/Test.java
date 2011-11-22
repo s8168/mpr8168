@@ -43,6 +43,10 @@ public class Test {
 	
 	System.out.println("\n\n\n");
 	System.out.println("------------------------------------------------------------");
+	u1.UsunGry(u1.SzukajGier("PC"));
+	u1.WypiszGry();
+	/*
+	
 	u1.UsunGre("Chrono Trigger");
 	u1.WypiszGry();
 	
@@ -61,7 +65,7 @@ public class Test {
 	u1.EdytujGre(1,"Secret of Evermore","Snes");
 	u1.EdytujGre("Teenagent","Stealth Bastard","PC");
 	u1.WypiszGry();
-
+*/
 	}
 
 }
