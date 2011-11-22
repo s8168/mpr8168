@@ -32,7 +32,10 @@ public class Test {
 	u2.DodajKomiks(new Komiks("Street Fighter", "Ken Siu-Chong"));
 	u2.DodajGre(new Gra("Virtua Cop 2", "Saturn"));
 	u2.DodajAudio(new Audio("Panopticon","ISIS"));
-		
+	
+	
+	
+	
 	u1.WypiszUzytkownika();
 	u1.WypiszGry();
 	u1.WypiszKomiks();
@@ -40,6 +43,8 @@ public class Test {
 	
 	System.out.println("\n\n\n");
 	System.out.println("------------------------------------------------------------");
+	u1.UsunGre("Chrono Trigger");
+	u1.WypiszGry();
 	
 	u1.UsunAudio("The Garden");
 	u1.UsunAudio(4);
@@ -56,6 +61,7 @@ public class Test {
 	u1.EdytujGre(1,"Secret of Evermore","Snes");
 	u1.EdytujGre("Teenagent","Stealth Bastard","PC");
 	u1.WypiszGry();
+
 	}
 
 }

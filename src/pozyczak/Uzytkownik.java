@@ -68,25 +68,24 @@ public class Uzytkownik {
 		}
 
 	
-	int SzukajGra(String nazwa){
-		int v =0;		
-		for(Gra graa : gry)
-			if(graa.getTytul()==nazwa){
-			v=gry.indexOf(graa);
-				break;			
-			}
+	public Gra SzukajGra(String tytul){
+		Gra v= new Gra("","");
+		for (Gra graa : gry)
+			if(graa.getTytul()==tytul) {
+				v=graa;
+				break;}
 		return v;
-			}
-		
+	}
 	
-	int SzukajGra(int ajdi){
-		int x =0;
-		for(Gra ga : gry)
-			if(ga.getGraId()==ajdi){
-				x=gry.indexOf(ga);
-				break;
-			}
-		return x;
+	
+	
+	Gra SzukajGra(int ajdi){
+		Gra v= new Gra("","");
+		for (Gra graa : gry)
+			if(graa.getGraId()==ajdi){
+				v=graa;
+				break;}
+		return v;
 	}
 					
 	
@@ -98,18 +97,19 @@ public class Uzytkownik {
 			gry.remove(SzukajGra(z));
 			}
 		
-	public void EdytujGre(int pozycja, String nowytytul, String nowaplatforma) {
-		int w=SzukajGra(pozycja);
-		gry.get(w).Tytul=nowytytul;
-		gry.get(w).Platforma=nowaplatforma;
-			}
+
+	public void EdytujGre(int idgry,String NowyTytul, String NowaPlatforma) {
+		SzukajGra(idgry).Tytul=NowyTytul;
+		SzukajGra(idgry).Platforma=NowaPlatforma;
+		
+		
+	}
 			
-	public void EdytujGre(String nazwagry, String nowytytul, String nowaplatforma) {
-		int w=SzukajGra(nazwagry);
-		gry.get(w).Tytul=nowytytul;
-		gry.get(w).Platforma=nowaplatforma;
-			}
-	
+	public void EdytujGre(String StaryTytul,String NowyTytul, String NowaPlatforma) {
+		SzukajGra(StaryTytul).Tytul=NowyTytul;
+		SzukajGra(StaryTytul).Platforma=NowaPlatforma;
+		
+	}
 	
 /*--------------------------------AUDIO----------------------------------------------------------------------*/	
 
@@ -121,24 +121,24 @@ public class Uzytkownik {
 		audio.clear();
 		}
 
-	int SzukajAudio(int id){
-		int w =0;
+	Audio SzukajAudio(int id){
+		Audio a = new Audio("", "");
 		for(Audio muzka : audio)
 			if(muzka.getAudioId()==id){
-				w=audio.indexOf(muzka);
+				a=muzka;
 					break;
 			}
-		return w;
+		return a;
 	}
 	
-	int SzukajAudio(String tytu){
-		int p =0;
+	Audio SzukajAudio(String tytu){
+		Audio a = new Audio("", "");
 		for (Audio nutka : audio)
 			if(nutka.getTytul()==tytu){
-				p=audio.indexOf(nutka);
+				a= nutka;
 				break;
 			}
-		return p;
+		return a;
 	}
 	
 	public void UsunAudio(int j) {
@@ -152,15 +152,13 @@ public class Uzytkownik {
 	}
 
 	public void EdytujAudio(int pozycja, String nowytytul, String nowywykonawca) {
-		int w=SzukajAudio(pozycja);
-		audio.get(w).Tytul=nowytytul;
-		audio.get(w).Wykonawca=nowywykonawca;
+		SzukajAudio(pozycja).Tytul=nowytytul;
+		SzukajAudio(pozycja).Wykonawca=nowywykonawca;
 			}
 			
 	public void EdytujAudio(String nazwaalbumu, String nowytytul, String nowywykonwaca) {
-		int w=SzukajAudio(nazwaalbumu);
-		audio.get(w).Tytul=nowytytul;
-		audio.get(w).Wykonawca=nowywykonwaca;
+		SzukajAudio(nazwaalbumu).Tytul=nowytytul;
+		SzukajAudio(nazwaalbumu).Wykonawca=nowywykonwaca;
 			}
 	
 /*----------------------------------KOMIKS-------------------------------------------------------------------*/	
@@ -174,22 +172,22 @@ public class Uzytkownik {
 		komiks.clear();
 		}
 
-	int SzukajKomiks(int l){
-		int u=0;
+	Komiks SzukajKomiks(int l){
+		Komiks u = new Komiks("", "");
 		for(Komiks alb : komiks)
 			if(alb.getKomiksId()==l){
-				u=komiks.indexOf(alb);
+				u=alb;
 			}
 		return u;
 	}	
 		
-	int SzukajKomiks (String ttt){
-		int q = 0;
-		for(Komiks tt : komiks)
-			if(tt.getTytul()==ttt){
-				q=komiks.indexOf(tt);
+	Komiks SzukajKomiks (String l){
+		Komiks u = new Komiks("", "");
+		for(Komiks alb : komiks)
+			if(alb.getTytul()==l){
+				u=alb;
 			}
-		return q;
+		return u;
 	}
 	
 	public void UsunKomiks(int dd) {
@@ -202,15 +200,13 @@ public void UsunKomiks(String ddd) {
 }
 
 public void EdytujKomiks(int pozycja, String nowytytul, String nowyautor) {
-	int w=SzukajKomiks(pozycja);
-	komiks.get(w).Tytul=nowytytul;
-	komiks.get(w).Autor=nowyautor;
-		}
+	SzukajKomiks(pozycja).Tytul=nowytytul;
+	SzukajKomiks(pozycja).Autor=nowyautor;
+}
 		
 public void EdytujKomiks(String nazwakomiksu, String nowytytul, String nowyautor ){
-	int w=SzukajKomiks(nazwakomiksu);
-	komiks.get(w).Tytul=nowytytul;
-	komiks.get(w).Autor=nowyautor;
+	SzukajKomiks(nazwakomiksu).Tytul=nowytytul;
+	SzukajKomiks(nazwakomiksu).Autor=nowyautor;
 		}
 
 }
