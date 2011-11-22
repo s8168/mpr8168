@@ -10,15 +10,15 @@ public class Test {
 	public static void main(String[] args) {
 		 
 		
-	Kto u1 = new Kto("Adam","Szczepinski","Ziben",777777777);
-	Kto u2 = new Kto("Porucznik","Borewicz","Boras",997);
+	Uzytkownik u1 = new Uzytkownik("Adam","Szczepinski","Ziben",777777777);
+	Uzytkownik u2 = new Uzytkownik("Porucznik","Borewicz","Boras",997);
 	
 	u1.DodajGre(new Gra("Battlefield 3","PC"));
 	u1.DodajGre(new Gra("Chrono Trigger","Snes"));
 	u1.DodajGre(new Gra("REZ","Dreamcast"));
 	u1.DodajGre(new Gra("Teenagent","PC"));
 
-	u1.DodajKomiks(new Komiks("Osiedle Swoboda","Micha³ Sledzinski"));
+	u1.DodajKomiks(new Komiks("Osiedle Swoboda","Michaï¿½ Sledzinski"));
 	u1.DodajKomiks(new Komiks("LOBO","Alan Grant, Simon Bisley"));
 	u1.DodajKomiks(new Komiks("48 Stron","Robert Adler, Tobiasz Piatkowski"));
 	
@@ -33,7 +33,7 @@ public class Test {
 	u2.DodajGre(new Gra("Virtua Cop 2", "Saturn"));
 	u2.DodajAudio(new Audio("Panopticon","ISIS"));
 		
-	u1.WypiszKto();
+	u1.WypiszUzytkownika();
 	u1.WypiszGry();
 	u1.WypiszKomiks();
 	u1.WypiszAudio();
