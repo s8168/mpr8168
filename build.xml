@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="metody" default="jar">
+
+	
+	<property name="bin" location="bin">
+	</property>
+	<property name="dist" location="dist">
+	</property>
+	<property name="src" location="src">
+	</property>
+	
+
+	<target name="init">
+		<tstamp />
+		<mkdir dir="${bin}" />
+		<mkdir dir="${dist}" />
+		
+	</target>
+
+
+	<target name="compile" depends="init">
+		<javac srcdir="${src}" destdir="${bin}" includeantruntime="false">
+		</javac>
+	</target>
+
+	<target name="jar" depends="compile">
+		<jar destfile="dist/metody-${DSTAMP}.jar" basedir="${bin}">
+		</jar>
+	</target>
+
+	<target name="clean">
+			<delete dir="${bin}">
+			</delete>
+			<delete dir="${dist}">
+			</delete>
+			
+		</target>	
+
+</project>
