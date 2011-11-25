@@ -29,9 +29,15 @@ public class Test {
 	u1.DodajAudio(new Audio("Disco Volante", "mr. Bungle"));
 	
 	
+	
 	u2.DodajKomiks(new Komiks("Street Fighter", "Ken Siu-Chong"));
+	
 	u2.DodajGre(new Gra("Virtua Cop 2", "Saturn"));
+	u2.DodajGre(new Gra("Fallout: New Vegas","PC"));
+	u2.DodajGre(new Gra("Portal 2","PC"));
+	
 	u2.DodajAudio(new Audio("Panopticon","ISIS"));
+	
 	
 	
 	
@@ -41,14 +47,14 @@ public class Test {
 	u1.WypiszKomiks();
 	u1.WypiszAudio();
 	
-	System.out.println("\n\n\n");
+	System.out.println("\n");
 	System.out.println("------------------------------------------------------------");
-	u1.UsunGry(u1.SzukajGier("PC"));
-	u1.WypiszGry();
-	/*
-	
+		
 	u1.UsunGre("Chrono Trigger");
 	u1.WypiszGry();
+	
+	System.out.println("\n");
+	System.out.println("------------------------------------------------------------");
 	
 	u1.UsunAudio("The Garden");
 	u1.UsunAudio(4);
@@ -60,12 +66,24 @@ public class Test {
 	u1.WypiszGry();
 	u1.WypiszKomiks();
 	u1.WypiszAudio();
-	System.out.println("\n\n\n");
+	System.out.println("\n");
 	System.out.println("------------------------------------------------------------");
 	u1.EdytujGre(1,"Secret of Evermore","Snes");
 	u1.EdytujGre("Teenagent","Stealth Bastard","PC");
 	u1.WypiszGry();
-*/
+	System.out.println("\n\n\n");
+	
+	u2.WypiszUzytkownika();
+	u2.WypiszGry();
+	u2.WypiszAudio();
+	u2.WypiszKomiks();
+	System.out.println("\n");
+	System.out.println("------------------------------------------------------------");
+	u2.UsunGry(u2.SzukajGier("PC"));
+	u2.WypiszGry();
+	
+	
+	
 	}
 
 }
