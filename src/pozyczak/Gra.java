@@ -9,11 +9,6 @@ public class Gra {
  String Tytul, Platforma;
  
 	
-	public String getTytul() {
-	return Tytul;
-}
-
-
 
 	public  Gra(String tytul, String platforma){
 		this.Tytul=tytul;
@@ -23,9 +18,7 @@ public class Gra {
 
 	
 
-	public String getPlatforma() {
-		return Platforma;
-	}
+	
 
 
 

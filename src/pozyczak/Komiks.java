@@ -20,10 +20,7 @@ public class Komiks {
 		return KomiksId;
 	}
 
-	public String getTytul() {
-		return Tytul;
-	}
-
+	
 
 
 

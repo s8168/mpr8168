@@ -20,8 +20,6 @@ public class Audio {
 		return AudioId;
 	}
 
-	public String getTytul() {
-		return Tytul;
-	}
+	
 
 }

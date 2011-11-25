@@ -73,7 +73,7 @@ public class Uzytkownik {
 	public Gra SzukajGra(String tytul){
 		Gra v= new Gra("","");
 		for (Gra graa : gry)
-			if(graa.getTytul()==tytul) {
+			if(graa.Tytul==tytul) {
 				v=graa;
 				break;}
 		return v;
@@ -94,7 +94,7 @@ public class Uzytkownik {
 	List<Gra> SzukajGier (String platforma){
 		List<Gra> gierki = new ArrayList<Gra>();
 		for (Gra gra : gry)
-			if(gra.getPlatforma()==(platforma)){
+			if(gra.Platforma==(platforma)){
 				gierki.add(gra);
 			}
 			return gierki;	
@@ -151,7 +151,7 @@ public class Uzytkownik {
 	Audio SzukajAudio(String tytu){
 		Audio a = new Audio("", "");
 		for (Audio nutka : audio)
-			if(nutka.getTytul()==tytu){
+			if(nutka.Tytul==tytu){
 				a= nutka;
 				break;
 			}
@@ -216,7 +216,7 @@ public class Uzytkownik {
 	Komiks SzukajKomiks (String l){
 		Komiks u = new Komiks("", "");
 		for(Komiks alb : komiks)
-			if(alb.getTytul()==l){
+			if(alb.Tytul==l){
 				u=alb;
 			}
 		return u;
