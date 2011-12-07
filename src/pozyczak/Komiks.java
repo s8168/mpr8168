@@ -20,6 +20,22 @@ public class Komiks {
 		return KomiksId;
 	}
 
+	public String getTytul() {
+		return Tytul;
+	}
+
+	public void setTytul(String tytul) {
+		Tytul = tytul;
+	}
+
+	public String getAutor() {
+		return Autor;
+	}
+
+	public void setAutor(String autor) {
+		Autor = autor;
+	}
+
 	
 
 

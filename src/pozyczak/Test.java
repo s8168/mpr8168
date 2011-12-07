@@ -18,7 +18,7 @@ public class Test {
 	u1.DodajGre(new Gra("REZ","Dreamcast"));
 	u1.DodajGre(new Gra("Teenagent","PC"));
 
-	u1.DodajKomiks(new Komiks("Osiedle Swoboda","Micha� Sledzinski"));
+	u1.DodajKomiks(new Komiks("Osiedle Swoboda","Michal Sledzinski"));
 	u1.DodajKomiks(new Komiks("LOBO","Alan Grant, Simon Bisley"));
 	u1.DodajKomiks(new Komiks("48 Stron","Robert Adler, Tobiasz Piatkowski"));
 	
@@ -27,6 +27,7 @@ public class Test {
 	u1.DodajAudio(new Audio("The Garden", "Zero7"));
 	u1.DodajAudio(new Audio("Driving Insane", "Black Sun Empire"));
 	u1.DodajAudio(new Audio("Disco Volante", "mr. Bungle"));
+	
 	
 	
 	
@@ -50,39 +51,21 @@ public class Test {
 	System.out.println("\n");
 	System.out.println("------------------------------------------------------------");
 		
-	u1.UsunGre("Chrono Trigger");
-	u1.WypiszGry();
-	
-	System.out.println("\n");
-	System.out.println("------------------------------------------------------------");
-	
-	u1.UsunAudio("The Garden");
-	u1.UsunAudio(4);
-	u1.UsunGre(2);
-	u1.UsunGre("REZ");
-	u1.CzyscKomiks();
-	
 
+	u1.WypiszUzytkownika();
+	u1.SzukajGra("Chrono Trigger").setPlatforma("PC");
 	u1.WypiszGry();
+	u1.UsunGry(u1.SzukajGier("PC"));
+	u1.WypiszGry();
+	
 	u1.WypiszKomiks();
-	u1.WypiszAudio();
-	System.out.println("\n");
-	System.out.println("------------------------------------------------------------");
-	u1.EdytujGre(1,"Secret of Evermore","Snes");
-	u1.EdytujGre("Teenagent","Stealth Bastard","PC");
-	u1.WypiszGry();
-	System.out.println("\n\n\n");
+	u1.CzyscKomiks();
+	u1.WypiszKomiks();
 	
-	u2.WypiszUzytkownika();
-	u2.WypiszGry();
+	u1.audio.remove(u1.SzukajAudio(3));
+	u1.DodajAudio(new Audio("Driving Insane", "Black Sun Empire"));
 	u2.WypiszAudio();
-	u2.WypiszKomiks();
-	System.out.println("\n");
-	System.out.println("------------------------------------------------------------");
-	u2.UsunGry(u2.SzukajGier("PC"));
-	u2.WypiszGry();
-	
-	
+	u1.WypiszAudio();
 	
 	}
 

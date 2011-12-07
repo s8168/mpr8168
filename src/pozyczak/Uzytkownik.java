@@ -8,8 +8,8 @@ import java.util.List;
 
 public class Uzytkownik {
 	
-	String Imie,Nazwisko,Ksywa;
-	int Telfon;	
+	public String Imie,Nazwisko,Ksywa;
+	public int Telfon;	
 	
 	public List<Gra> gry = new ArrayList<Gra>();
 	public List<Audio> audio = new ArrayList<Audio>();
@@ -31,7 +31,7 @@ public class Uzytkownik {
 /*--------------------------------------Wypisz---------------------------------------------------------------*/	
 	
 	public void WypiszUzytkownika(){
-		System.out.println("Dane personalne to: Imi�: " + this.Imie + ", Nazwisko: " + this.Nazwisko+
+		System.out.println("Dane personalne to: Imie: " + this.Imie + ", Nazwisko: " + this.Nazwisko+
 				", Ksywa: "+this.Ksywa+", Telefon: "+this.Telfon);
 		
 		System.out.println("------------------------------------------------------------");
@@ -70,28 +70,26 @@ public class Uzytkownik {
 		}
 
 	
-	public Gra SzukajGra(String tytul){
-		Gra v= new Gra("","");
+	public Gra SzukajGra(String tytul){ //
 		for (Gra graa : gry)
 			if(graa.Tytul==tytul) {
-				v=graa;
-				break;}
-		return v;
+				return graa;
+			}
+		return null;
 	}
 	
 	
 	
-	Gra SzukajGra(int ajdi){
-		Gra v= new Gra("","");
+	public Gra SzukajGra(int ajdi){
 		for (Gra graa : gry)
 			if(graa.getGraId()==ajdi){
-				v=graa;
-				break;}
-		return v;
+				return graa;
+			}
+		return null;
 	}
 				
 	
-	List<Gra> SzukajGier (String platforma){
+	public List<Gra> SzukajGier (String platforma){  //
 		List<Gra> gierki = new ArrayList<Gra>();
 		for (Gra gra : gry)
 			if(gra.Platforma==(platforma)){
@@ -101,11 +99,11 @@ public class Uzytkownik {
 		
 	}
 	
-	void UsunGry(List<Gra> listagier){
-		for (Gra g : listagier)
-			gry.remove(g);
+	public void UsunGry(List<Gra> listagier){ //
+		gry.removeAll(listagier);
 	}
 	
+/*
 	public void UsunGre(String tyt){
 		gry.remove(SzukajGra(tyt));
 	}
@@ -127,7 +125,7 @@ public class Uzytkownik {
 		SzukajGra(StaryTytul).Platforma=NowaPlatforma;
 		
 	}
-	
+	*/
 /*--------------------------------AUDIO----------------------------------------------------------------------*/	
 
 	public void DodajAudio(Audio plyta) {
@@ -139,23 +137,20 @@ public class Uzytkownik {
 		}
 
 	Audio SzukajAudio(int id){
-		Audio a = new Audio("", "");
 		for(Audio muzka : audio)
 			if(muzka.getAudioId()==id){
-				a=muzka;
-					break;
+					return muzka;
 			}
-		return a;
+		return null;
 	}
 	
 	Audio SzukajAudio(String tytu){
-		Audio a = new Audio("", "");
-		for (Audio nutka : audio)
+			for (Audio nutka : audio)
 			if(nutka.Tytul==tytu){
-				a= nutka;
-				break;
+				return nutka;
+				
 			}
-		return a;
+		return null;
 	}
 	
 	
@@ -170,9 +165,12 @@ public class Uzytkownik {
 	}
 	
 	void UsunPlytki(List<Audio> listaplyt){
-		 for (Audio g : listaplyt)
-			audio.remove(g);
+		 audio.removeAll(listaplyt);
+	
+	
 	}
+	
+	/*
 	public void UsunAudio(int j) {
 		audio.remove(SzukajAudio(j));
 		
@@ -192,7 +190,7 @@ public class Uzytkownik {
 		SzukajAudio(nazwaalbumu).Tytul=nowytytul;
 		SzukajAudio(nazwaalbumu).Wykonawca=nowywykonwaca;
 			}
-	
+	*/
 /*----------------------------------KOMIKS-------------------------------------------------------------------*/	
 	
 	
@@ -205,21 +203,19 @@ public class Uzytkownik {
 		}
 
 	Komiks SzukajKomiks(int l){
-		Komiks u = new Komiks("", "");
 		for(Komiks alb : komiks)
 			if(alb.getKomiksId()==l){
-				u=alb;
+				return alb;
 			}
-		return u;
+		return null;
 	}	
 		
 	Komiks SzukajKomiks (String l){
-		Komiks u = new Komiks("", "");
 		for(Komiks alb : komiks)
 			if(alb.Tytul==l){
-				u=alb;
+				return alb;
 			}
-		return u;
+		return null;
 	}
 	
 	List<Komiks> SzukajKomiksow(String autor){
@@ -236,6 +232,49 @@ public class Uzytkownik {
 		 for (Komiks kkk : listakomiksow)
 			komiks.remove(kkk);
 	}
+
+
+	public String getImie() {
+		return Imie;
+	}
+
+
+	public void setImie(String imie) {
+		Imie = imie;
+	}
+
+
+	public String getNazwisko() {
+		return Nazwisko;
+	}
+
+
+	public void setNazwisko(String nazwisko) {
+		Nazwisko = nazwisko;
+	}
+
+
+	public String getKsywa() {
+		return Ksywa;
+	}
+
+
+	public void setKsywa(String ksywa) {
+		Ksywa = ksywa;
+	}
+
+
+	public int getTelfon() {
+		return Telfon;
+	}
+
+
+	public void setTelfon(int telfon) {
+		Telfon = telfon;
+	}
+	
+	
+	/*
 	
 	public void UsunKomiks(int dd) {
 		komiks.remove(SzukajKomiks(dd));
@@ -256,7 +295,7 @@ public void EdytujKomiks(String nazwakomiksu, String nowytytul, String nowyautor
 	SzukajKomiks(nazwakomiksu).Tytul=nowytytul;
 	SzukajKomiks(nazwakomiksu).Autor=nowyautor;
 		}
-
+*/
 }
 	
 	

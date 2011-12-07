@@ -20,6 +20,22 @@ public class Audio {
 		return AudioId;
 	}
 
+	public String getTytul() {
+		return Tytul;
+	}
+
+	public void setTytul(String tytul) {
+		Tytul = tytul;
+	}
+
+	public String getWykonawca() {
+		return Wykonawca;
+	}
+
+	public void setWykonawca(String wykonawca) {
+		Wykonawca = wykonawca;
+	}
+
 	
 
 }

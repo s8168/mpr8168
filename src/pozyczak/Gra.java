@@ -6,7 +6,7 @@ public class Gra {
 	private static int maxId=0;
 	private int GraId;
 	
- String Tytul, Platforma;
+ public String Tytul, Platforma;
  
 	
 
@@ -18,10 +18,6 @@ public class Gra {
 
 	
 
-	
-
-
-
 	void WypiszGre(){
 		System.out.println("ID Gry:"+GraId+", Tytul: "+Tytul+" , Platforma: "+Platforma);
 	}
@@ -29,6 +25,27 @@ public class Gra {
 
 	public int getGraId() {
 		return GraId;
+	}
+
+
+	public String getTytul() {
+		return Tytul;
+	}
+
+
+	public void setTytul(String tytul) {
+		this.Tytul = tytul;
+	}
+
+
+
+	public String getPlatforma() {
+		return Platforma;
+	}
+
+
+	public void setPlatforma(String platforma) {
+		Platforma = platforma;
 	}
 
 }
