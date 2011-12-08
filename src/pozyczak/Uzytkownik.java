@@ -103,29 +103,7 @@ public class Uzytkownik {
 		gry.removeAll(listagier);
 	}
 	
-/*
-	public void UsunGre(String tyt){
-		gry.remove(SzukajGra(tyt));
-	}
-	
-	public void UsunGre(int z){
-			gry.remove(SzukajGra(z));
-			}
-		
 
-	public void EdytujGre(int idgry,String NowyTytul, String NowaPlatforma) {
-		SzukajGra(idgry).Tytul=NowyTytul;
-		SzukajGra(idgry).Platforma=NowaPlatforma;
-		
-		
-	}
-			
-	public void EdytujGre(String StaryTytul,String NowyTytul, String NowaPlatforma) {
-		SzukajGra(StaryTytul).Tytul=NowyTytul;
-		SzukajGra(StaryTytul).Platforma=NowaPlatforma;
-		
-	}
-	*/
 /*--------------------------------AUDIO----------------------------------------------------------------------*/	
 
 	public void DodajAudio(Audio plyta) {
@@ -170,27 +148,7 @@ public class Uzytkownik {
 	
 	}
 	
-	/*
-	public void UsunAudio(int j) {
-		audio.remove(SzukajAudio(j));
-		
-	}
-	
-	public void UsunAudio (String album) {
-		audio.remove(SzukajAudio(album));
-		
-	}
 
-	public void EdytujAudio(int pozycja, String nowytytul, String nowywykonawca) {
-		SzukajAudio(pozycja).Tytul=nowytytul;
-		SzukajAudio(pozycja).Wykonawca=nowywykonawca;
-			}
-			
-	public void EdytujAudio(String nazwaalbumu, String nowytytul, String nowywykonwaca) {
-		SzukajAudio(nazwaalbumu).Tytul=nowytytul;
-		SzukajAudio(nazwaalbumu).Wykonawca=nowywykonwaca;
-			}
-	*/
 /*----------------------------------KOMIKS-------------------------------------------------------------------*/	
 	
 	
@@ -274,28 +232,7 @@ public class Uzytkownik {
 	}
 	
 	
-	/*
-	
-	public void UsunKomiks(int dd) {
-		komiks.remove(SzukajKomiks(dd));
-		
-}
 
-	public void UsunKomiks(String ddd) {
-	komiks.remove(SzukajKomiks(ddd));
-	
-}
-
-public void EdytujKomiks(int pozycja, String nowytytul, String nowyautor) {
-	SzukajKomiks(pozycja).Tytul=nowytytul;
-	SzukajKomiks(pozycja).Autor=nowyautor;
-}
-		
-public void EdytujKomiks(String nazwakomiksu, String nowytytul, String nowyautor ){
-	SzukajKomiks(nazwakomiksu).Tytul=nowytytul;
-	SzukajKomiks(nazwakomiksu).Autor=nowyautor;
-		}
-*/
 }
 	
 	

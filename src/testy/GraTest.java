@@ -52,7 +52,8 @@ public class GraTest {
 		assertEquals("NES", g2.Platforma);
 		
 		
-
+		g1=null;
+		g2=null;
 	}
 
 }
