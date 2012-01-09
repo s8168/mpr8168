@@ -39,7 +39,7 @@
 	</target>
 
 	<target name="run" depends="compile" description="Uruchamia program">
-	     <java classname="metody.src.pozyczak.Test" failonerror="true" fork="yes">
+	     <java classname="pozyczak.Test" failonerror="true" fork="yes">
 	         <classpath refid="metody.classpath"/>
 		</java>		
 	</target>	
