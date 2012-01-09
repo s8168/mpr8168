@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="metody" default="jar">
+<project name="metody" default="testy">
 
 	
 	<property name="bin" location="bin">
 	</property>
 	<property name="dist" location="dist">
 	</property>
-	<property name="src" location="src">
+	<property name="src" location="src">	
 	</property>
+	<property name="testout" location="testout">	
+		</property>
 	
+	<path id="metody.classpath">
+	<pathelement location="bin"/>
+	<pathelement location="lib/junit-4.10.jar"/>
+	</path>
 
 	<target name="init">
 		<tstamp />
 		<mkdir dir="${bin}" />
 		<mkdir dir="${dist}" />
+		<mkdir dir="${testout}" />
 		
 	</target>
 
@@ -24,19 +31,35 @@
 		</javac>
 	</target>
 
+	
+	
 	<target name="jar" depends="compile">
 		<jar destfile="dist/metody-${DSTAMP}.jar" basedir="${bin}">
 		</jar>
 	</target>
 
-	<target name="clean">
-			<delete dir="${bin}">
-			</delete>
-			<delete dir="${dist}">
-			</delete>
-			
-		</target>	
-
+	<target name="run" depends="compile" description="Uruchamia program">
+	     <java classname="metody.src.pozyczak.Test" failonerror="true" fork="yes">
+	         <classpath refid="metody.classpath"/>
+		</java>		
+	</target>	
 	
+	<target name="testy" depends="compile">
+		 <junit fork="no" >
+		<formatter type="xml"/>
+	  		<test name="testy.AudioTest" todir="${testout}"/>
+		 	<test name="testy.GraTest" todir="${testout}"/>
+		 	<test name="testy.KomiksTest" todir="${testout}"/>
+		 	<test name="testy.UzytkownikTest" todir="${testout}"/>
+		<classpath refid="metody.classpath"/>
+	</junit>
+		</target>
 
+	<target name="clean">
+				<delete dir="${bin}">
+				</delete>
+				<delete dir="${dist}">
+				</delete>
+				
+			</target>
 </project>

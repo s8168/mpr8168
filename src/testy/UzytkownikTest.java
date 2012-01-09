@@ -30,7 +30,7 @@ public class UzytkownikTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		p.WypiszGry();
+		
 		p= new Uzytkownik("Marian", "Rasta", "Rastamarian", 7777777 );
 		
 		g1 = new Gra("LIMBO", "PC");
