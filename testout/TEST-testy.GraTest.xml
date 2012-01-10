@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="student-vm" name="testy.GraTest" tests="3" time="0.0030" timestamp="2012-01-10T18:07:20">
+  <properties>
+    <property name="java.vendor" value="Sun Microsystems Inc." />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="eclipse.pdebuild.templates" value="/opt/devel/eclipse/plugins/org.eclipse.pde.build_3.7.0.v20110512-1320/templates//" />
+    <property name="sun.management.compiler" value="HotSpot Client Compiler" />
+    <property name="dist" value="/home/student/Pulpit/metody/dist" />
+    <property name="os.name" value="Linux" />
+    <property name="sun.boot.class.path" value="/opt/devel/jdk1.6.0_27/jre/lib/resources.jar:/opt/devel/jdk1.6.0_27/jre/lib/rt.jar:/opt/devel/jdk1.6.0_27/jre/lib/sunrsasign.jar:/opt/devel/jdk1.6.0_27/jre/lib/jsse.jar:/opt/devel/jdk1.6.0_27/jre/lib/jce.jar:/opt/devel/jdk1.6.0_27/jre/lib/charsets.jar:/opt/devel/jdk1.6.0_27/jre/lib/modules/jdk.boot.jar:/opt/devel/jdk1.6.0_27/jre/classes" />
+    <property name="ant.file.metody" value="/home/student/Pulpit/metody/build.xml" />
+    <property name="TODAY" value="January 10 2012" />
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="ant.home" value="/opt/devel/eclipse/plugins/org.apache.ant_1.8.2.v20110505-1300" />
+    <property name="java.runtime.version" value="1.6.0_27-b07" />
+    <property name="user.name" value="student" />
+    <property name="user.language" value="pl" />
+    <property name="sun.boot.library.path" value="/opt/devel/jdk1.6.0_27/jre/lib/i386" />
+    <property name="ant.project.default-target" value="testy" />
+    <property name="ant.project.name" value="metody" />
+    <property name="DSTAMP" value="20120110" />
+    <property name="java.version" value="1.6.0_27" />
+    <property name="user.timezone" value="" />
+    <property name="bin" value="/home/student/Pulpit/metody/bin" />
+    <property name="sun.arch.data.model" value="32" />
+    <property name="testout" value="/home/student/Pulpit/metody/testout" />
+    <property name="java.endorsed.dirs" value="/opt/devel/jdk1.6.0_27/jre/lib/endorsed" />
+    <property name="sun.cpu.isalist" value="" />
+    <property name="sun.jnu.encoding" value="UTF-8" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="file.separator" value="/" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="java.class.version" value="50.0" />
+    <property name="src" value="/home/student/Pulpit/metody/src" />
+    <property name="user.country" value="PL" />
+    <property name="java.home" value="/opt/devel/jdk1.6.0_27/jre" />
+    <property name="ant.file.type.metody" value="file" />
+    <property name="java.vm.info" value="mixed mode, sharing" />
+    <property name="ant.file" value="/home/student/Pulpit/metody/build.xml" />
+    <property name="os.version" value="2.6.38-13-generic" />
+    <property name="path.separator" value=":" />
+    <property name="java.vm.version" value="20.2-b06" />
+    <property name="ant.library.dir" value="/opt/devel/eclipse/plugins/org.apache.ant_1.8.2.v20110505-1300/lib" />
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="eclipse.pdebuild.scripts" value="/opt/devel/eclipse/plugins/org.eclipse.pde.build_3.7.0.v20110512-1320/scripts//" />
+    <property name="user.home" value="/home/student" />
+    <property name="java.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="java.library.path" value="/opt/devel/jdk1.6.0_27/jre/lib/i386/client:/opt/devel/jdk1.6.0_27/jre/lib/i386::/usr/java/packages/lib/i386:/lib:/usr/lib:/opt/devel/eclipse/configuration/org.eclipse.osgi/bundles/587/1/.cp" />
+    <property name="java.vendor.url" value="http://java.sun.com/" />
+    <property name="java.vm.vendor" value="Sun Microsystems Inc." />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="sun.java.command" value="org.eclipse.ant.internal.launching.remote.InternalAntRunner -Dorg.eclipse.ant.core.ANT_PROCESS_ID=1326218838958 -Declipse.connect.port=34893 -Declipse.pdebuild.home=/opt/devel/eclipse/plugins/org.eclipse.pde.build_3.7.0.v20110512-1320/.// -Declipse.pdebuild.scripts=/opt/devel/eclipse/plugins/org.eclipse.pde.build_3.7.0.v20110512-1320/scripts// -Declipse.pdebuild.templates=/opt/devel/eclipse/plugins/org.eclipse.pde.build_3.7.0.v20110512-1320/templates// -Dant.home=/opt/devel/eclipse/plugins/org.apache.ant_1.8.2.v20110505-1300 -logger org.eclipse.ant.internal.launching.remote.logger.RemoteAntBuildLogger -inputhandler org.eclipse.ant.internal.ui.antsupport.inputhandler.ProxyInputHandler -buildfile /home/student/Pulpit/metody/build.xml" />
+    <property name="java.class.path" value="/opt/devel/eclipse/plugins/org.apache.ant_1.8.2.v20110505-1300/lib/ant-antlr.jar:/opt/devel/eclipse/plugins/org.apache.ant_1.8.2.v20110505-1300/lib/ant-apache-bcel.jar:/opt/devel/eclipse/plugins/org.apache.ant_1.8.2.v20110505-1300/lib/ant-apache-bsf.jar:/opt/devel/eclipse/plugins/org.apache.ant_1.8.2.v20110505-1300/lib/ant-apache-log4j.jar:/opt/devel/eclipse/plugins/org.apache.ant_1.8.2.v20110505-1300/lib/ant-apache-oro.jar:/opt/devel/eclipse/plugins/org.apache.ant_1.8.2.v20110505-1300/lib/ant-apache-regexp.jar:/opt/devel/eclipse/plugins/org.apache.ant_1.8.2.v20110505-1300/lib/ant-apache-resolver.jar:/opt/devel/eclipse/plugins/org.apache.ant_1.8.2.v20110505-1300/lib/ant-apache-xalan2.jar:/opt/devel/eclipse/plugins/org.apache.ant_1.8.2.v20110505-1300/lib/ant-commons-logging.jar:/opt/devel/eclipse/plugins/org.apache.ant_1.8.2.v20110505-1300/lib/ant-commons-net.jar:/opt/devel/eclipse/plugins/org.apache.ant_1.8.2.v20110505-1300/lib/ant-jai.jar:/opt/devel/eclipse/plugins/org.apache.ant_1.8.2.v20110505-1300/lib/ant-javamail.jar:/opt/devel/eclipse/plugins/org.apache.ant_1.8.2.v20110505-1300/lib/ant-jdepend.jar:/opt/devel/eclipse/plugins/org.apache.ant_1.8.2.v20110505-1300/lib/ant-jmf.jar:/opt/devel/eclipse/plugins/org.apache.ant_1.8.2.v20110505-1300/lib/ant-jsch.jar:/opt/devel/eclipse/plugins/org.apache.ant_1.8.2.v20110505-1300/lib/ant-junit.jar:/opt/devel/eclipse/plugins/org.apache.ant_1.8.2.v20110505-1300/lib/ant-junit4.jar:/opt/devel/eclipse/plugins/org.apache.ant_1.8.2.v20110505-1300/lib/ant-launcher.jar:/opt/devel/eclipse/plugins/org.apache.ant_1.8.2.v20110505-1300/lib/ant-netrexx.jar:/opt/devel/eclipse/plugins/org.apache.ant_1.8.2.v20110505-1300/lib/ant-swing.jar:/opt/devel/eclipse/plugins/org.apache.ant_1.8.2.v20110505-1300/lib/ant-testutil.jar:/opt/devel/eclipse/plugins/org.apache.ant_1.8.2.v20110505-1300/lib/ant.jar:/opt/devel/eclipse/configuration/org.eclipse.osgi/bundles/50/1/.cp/lib/antdebug.jar:/opt/devel/eclipse/configuration/org.eclipse.osgi/bundles/50/1/.cp/lib/remote.jar:/opt/devel/eclipse/configuration/org.eclipse.osgi/bundles/51/1/.cp/lib/remoteAnt.jar:/opt/devel/jdk1.6.0_27/lib/tools.jar:/opt/devel/eclipse/plugins/org.eclipse.swt.gtk.linux.x86_3.7.0.v3735b.jar:/opt/devel/eclipse/plugins/org.jboss.tools.xulrunner.initializer_3.1.0.v20110624-0519-H5-M2.jar" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.8.2 compiled on December 20 2010" />
+    <property name="TSTAMP" value="1907" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="java.vm.specification.version" value="1.0" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="sun.os.patch.level" value="unknown" />
+    <property name="eclipse.pdebuild.home" value="/opt/devel/eclipse/plugins/org.eclipse.pde.build_3.7.0.v20110512-1320/.//" />
+    <property name="java.io.tmpdir" value="/tmp" />
+    <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi" />
+    <property name="os.arch" value="i386" />
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment" />
+    <property name="java.ext.dirs" value="/opt/devel/jdk1.6.0_27/jre/lib/ext:/usr/java/packages/lib/ext" />
+    <property name="user.dir" value="/home/student/Pulpit/metody" />
+    <property name="line.separator" value="&#xa;" />
+    <property name="java.vm.name" value="Java HotSpot(TM) Client VM" />
+    <property name="basedir" value="/home/student/Pulpit/metody" />
+    <property name="ant.java.version" value="1.6" />
+    <property name="ant.core.lib" value="/opt/devel/eclipse/plugins/org.apache.ant_1.8.2.v20110505-1300/lib/ant.jar" />
+    <property name="file.encoding" value="UTF-8" />
+    <property name="java.specification.version" value="1.6" />
+    <property name="ant.project.invoked-targets" value="testy" />
+  </properties>
+  <testcase classname="testy.GraTest" name="testSetTytul" time="0.0" />
+  <testcase classname="testy.GraTest" name="testGra" time="0.0" />
+  <testcase classname="testy.GraTest" name="testSetPlatforma" time="0.0" />
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
