@@ -1,6 +1,7 @@
 package pozyczak;
 
-
+import services.GraDBManager;
+import services.UrzytkownikDBManager;
 
 public class Test {
 
@@ -67,6 +68,29 @@ public class Test {
 	u2.WypiszAudio();
 	u1.WypiszAudio();
 	
+	
+System.out.println(" ******************JDBC********************* ");
+	
+	
+	
+	UrzytkownikDBManager uzytkownicy = new UrzytkownikDBManager();
+	GraDBManager  Giereczky = new GraDBManager ();
+	Giereczky.UsunWszystkieGry();
+	uzytkownicy.UsunWszystkichUrzytkownikow();
+	
+    Uzytkownik u11 = new Uzytkownik ("Roman", "Papka");
+    uzytkownicy.DodajUrzytkownik(u11);
+	Uzytkownik u12 = new Uzytkownik ("Marta", "Jarosz");
+	uzytkownicy.DodajUrzytkownik(u12);
+	
+	Gra ksiazka1 = new Gra ("GTA 4", "PC");
+	Giereczky.DodajKsiazke(ksiazka1, uzytkownicy.ZnajdzUrzytkownik("Papka"));
+	Gra ksiazka2 = new Gra("Dead space", "PS 3");
+	Giereczky.DodajKsiazke(ksiazka2, uzytkownicy.ZnajdzUrzytkownik("Papka"));
+	Gra ksiazka3 = new Gra ("Okami", "PS 2");
+	Giereczky.DodajKsiazke(ksiazka3 ,uzytkownicy.ZnajdzUrzytkownik("Jarosz"));
+	
+	}
 	}
 
-}
+

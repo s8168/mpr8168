@@ -27,6 +27,12 @@ public class Uzytkownik {
 		
 	}
 	
+public Uzytkownik(String imie,String nazwisko){
+		
+		this.Imie=imie;
+		this.Nazwisko=nazwisko;
+				
+	}
 	
 /*--------------------------------------Wypisz---------------------------------------------------------------*/	
 	
