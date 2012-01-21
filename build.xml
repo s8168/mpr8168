@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="metody" default="testy">
+<project name="metody" default="test_user">
 
 	
 	<property name="bin" location="bin">

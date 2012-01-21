@@ -50,11 +50,11 @@ public class UrzytkownikDBManager {
 		  ")");
 		  }
 
-		  DodajUrzytkownikStmt = conn.prepareStatement("INSERT INTO Osoby (imie, nazwisko) VALUES (?, ?)");
-		  PobierzUrzytkownikowStmt = conn.prepareStatement("SELECT * FROM Osoby");
-		  ZnajdzUrzytkownikStmt = conn.prepareStatement("SELECT * FROM Osoby WHERE nazwisko = ?");       
-          UsunUrzytkownikStmt = conn.prepareStatement("DELETE FROM Osoby WHERE ID = ?");
-          UsunWszystkichUrzytkownikowStmt = conn.prepareStatement("DELETE FROM Osoby");
+		  DodajUrzytkownikStmt = conn.prepareStatement("INSERT INTO Urzytkownicy (imie, nazwisko) VALUES (?, ?)");
+		  PobierzUrzytkownikowStmt = conn.prepareStatement("SELECT * FROM Urzytkownicy");
+		  ZnajdzUrzytkownikStmt = conn.prepareStatement("SELECT * FROM Urzytkownicy WHERE nazwisko = ?");       
+          UsunUrzytkownikStmt = conn.prepareStatement("DELETE FROM Urzytkownicy WHERE ID = ?");
+          UsunWszystkichUrzytkownikowStmt = conn.prepareStatement("DELETE FROM Urzytkownicy");
 
 
 		  } catch (SQLException e) {
@@ -130,5 +130,8 @@ public class UrzytkownikDBManager {
 	  e.printStackTrace();
 	  }
 	}
-
+/*
+  select  nazwisko,tytul,urzytkownicy.id,gry.id from urzytkownicy,gry where gry.id_urzytkownik=urzytkownicy.
+		  id
+		  ;*/
 }

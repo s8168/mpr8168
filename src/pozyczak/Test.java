@@ -83,12 +83,12 @@ System.out.println(" ******************JDBC********************* ");
 	Uzytkownik u12 = new Uzytkownik ("Marta", "Jarosz");
 	uzytkownicy.DodajUrzytkownik(u12);
 	
-	Gra ksiazka1 = new Gra ("GTA 4", "PC");
-	Giereczky.DodajKsiazke(ksiazka1, uzytkownicy.ZnajdzUrzytkownik("Papka"));
-	Gra ksiazka2 = new Gra("Dead space", "PS 3");
-	Giereczky.DodajKsiazke(ksiazka2, uzytkownicy.ZnajdzUrzytkownik("Papka"));
-	Gra ksiazka3 = new Gra ("Okami", "PS 2");
-	Giereczky.DodajKsiazke(ksiazka3 ,uzytkownicy.ZnajdzUrzytkownik("Jarosz"));
+	Gra Gireczka1 = new Gra ("GTA 4", "PC");
+	Giereczky.DodajGre(Gireczka1, uzytkownicy.ZnajdzUrzytkownik("Papka"));
+	Gra Giereczka2 = new Gra("Dead space", "PS 3");
+	Giereczky.DodajGre(Giereczka2, uzytkownicy.ZnajdzUrzytkownik("Papka"));
+	Gra Giereczka3 = new Gra ("Okami", "PS 2");
+	Giereczky.DodajGre(Giereczka3 ,uzytkownicy.ZnajdzUrzytkownik("Jarosz"));
 	
 	}
 	}
