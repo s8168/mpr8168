@@ -44,16 +44,23 @@
 		</java>		
 	</target>	
 	
-	<target name="testy" depends="compile">
+	<target name="test_object" depends="compile">
 		 <junit fork="no" >
 		<formatter type="xml"/>
 	  		<test name="testy.AudioTest" todir="${testout}"/>
 		 	<test name="testy.GraTest" todir="${testout}"/>
 		 	<test name="testy.KomiksTest" todir="${testout}"/>
-		 	<test name="testy.UzytkownikTest" todir="${testout}"/>
 		<classpath refid="metody.classpath"/>
 	</junit>
 		</target>
+	
+	<target name="test_user" depends="test_object">
+			 <junit fork="no" >
+			 <formatter type="xml"/>
+			 <test name="testy.UzytkownikTest" todir="${testout}"/>
+			 <classpath refid="metody.classpath"/>
+		</junit>
+			</target>
 
 	<target name="clean">
 				<delete dir="${bin}">

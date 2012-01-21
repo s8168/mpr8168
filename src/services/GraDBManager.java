@@ -48,11 +48,11 @@ public class GraDBManager {
 		"Constraint urzytkownik_fk foreign key (id_urzytkownik) references Urzytkownicy(id) on delete cascade" +
 		")");
 		}
-		DodajGreStmt = conn.prepareStatement("" +"INSERT INTO Ksiazki (Autor, Tytul, Cena, id_osoba) VALUES (?,?,?,?)" +"");
-		PobierzGryStmt = conn.prepareStatement("" +"SELECT * FROM Ksiazki" +"");
-		ZnajdzGrePoTytuleStmt = conn.prepareStatement("SELECT * FROM Ksiazki WHERE Autor= ?");
-		UsunGreStmt = conn.prepareStatement("DELETE FROM Ksiazki WHERE ID = ?");
-		UsunWszystkieGryStmt = conn.prepareStatement("DELETE FROM Ksiazki");
+		DodajGreStmt = conn.prepareStatement("" +"INSERT INTO Gry (Tytul, Platforma, id_Uzytkownik) VALUES (?,?,?)" +"");
+		PobierzGryStmt = conn.prepareStatement("" +"SELECT * FROM Gry " +"");
+		ZnajdzGrePoTytuleStmt = conn.prepareStatement("SELECT * FROM Gry WHERE Tytul= ?");
+		UsunGreStmt = conn.prepareStatement("DELETE FROM Gry WHERE ID = ?");
+		UsunWszystkieGryStmt = conn.prepareStatement("DELETE FROM Gry");
 
 		} catch (SQLException e) {
 
