@@ -67,10 +67,7 @@ public class Test {
 	u1.DodajAudio(new Audio("Driving Insane", "Black Sun Empire"));
 	u2.WypiszAudio();
 	u1.WypiszAudio();
-	
-	
-System.out.println(" ******************JDBC********************* ");
-	
+		
 	
 	
 	UrzytkownikDBManager uzytkownicy = new UrzytkownikDBManager();

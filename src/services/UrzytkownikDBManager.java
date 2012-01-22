@@ -55,7 +55,7 @@ public class UrzytkownikDBManager {
 		  ZnajdzUrzytkownikStmt = conn.prepareStatement("SELECT * FROM Urzytkownicy WHERE nazwisko = ?");       
           UsunUrzytkownikStmt = conn.prepareStatement("DELETE FROM Urzytkownicy WHERE ID = ?");
           UsunWszystkichUrzytkownikowStmt = conn.prepareStatement("DELETE FROM Urzytkownicy");
-
+          
 
 		  } catch (SQLException e) {
 
