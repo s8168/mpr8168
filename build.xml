@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="metody" default="test_user">
+<project name="metody" default="test_jdbc">
 
 	
 	<property name="bin" location="bin">
@@ -61,6 +61,15 @@
 			 <classpath refid="metody.classpath"/>
 		</junit>
 			</target>
+	
+	<target name="test_jdbc" depends="test_user">
+				 <junit fork="no" >
+				 <formatter type="xml"/>
+				 <test name="testy.UrzytkownikDBManagerTest" todir="${testout}"/>
+				 <test name="testy.GraDBManagerTest" todir="${testout}"/>
+				 <classpath refid="metody.classpath"/>
+			</junit>
+				</target>
 
 	<target name="clean">
 				<delete dir="${bin}">

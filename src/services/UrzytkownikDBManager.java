@@ -22,7 +22,7 @@ public class UrzytkownikDBManager {
 	private PreparedStatement ZnajdzUrzytkownikStmt;
 	private PreparedStatement UsunUrzytkownikStmt;
 	private PreparedStatement UsunWszystkichUrzytkownikowStmt;
-	 
+	
 
     public UrzytkownikDBManager() {
 
@@ -55,8 +55,7 @@ public class UrzytkownikDBManager {
 		  ZnajdzUrzytkownikStmt = conn.prepareStatement("SELECT * FROM Urzytkownicy WHERE nazwisko = ?");       
           UsunUrzytkownikStmt = conn.prepareStatement("DELETE FROM Urzytkownicy WHERE ID = ?");
           UsunWszystkichUrzytkownikowStmt = conn.prepareStatement("DELETE FROM Urzytkownicy");
-          
-
+        
 		  } catch (SQLException e) {
 
 		  e.printStackTrace();
@@ -77,7 +76,7 @@ public class UrzytkownikDBManager {
 	  	}
 
 	  }
-  public List<Uzytkownik> PobierzOsoby(){
+  public List<Uzytkownik> PobierzUrzytkownikow(){
 	  List<Uzytkownik> osoby =new ArrayList<Uzytkownik>();
 
 	  try {
@@ -130,8 +129,14 @@ public class UrzytkownikDBManager {
 	  e.printStackTrace();
 	  }
 	}
-/*
+
+  
+  
+	  
+}
+  
+  /*
   select  nazwisko,tytul,urzytkownicy.id,gry.id from urzytkownicy,gry where gry.id_urzytkownik=urzytkownicy.
 		  id
 		  ;*/
-}
+

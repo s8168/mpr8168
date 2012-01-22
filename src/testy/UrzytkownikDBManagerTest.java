@@ -2,6 +2,9 @@ package testy;
 
 import static org.junit.Assert.*;
 
+
+
+import org.junit.After;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -20,36 +23,64 @@ public class UrzytkownikDBManagerTest {
 		 uman1 = new UrzytkownikDBManager();
 		 u1= new Uzytkownik("Wiktor", "Korczens");
 		 u2= new Uzytkownik("Roman", "Amber");
-		 u3= new Uzytkownik("Olaf", "Jazdza");
+		 u3= new Uzytkownik("Emilia", "Kindziuk");
+		 
 	}
 
+	@After
+	public void tearDown() throws Exception {
+		uman1.UsunWszystkichUrzytkownikow();
+	}
+		
 	@Test
 	public void testUrzytkownikDBManager() {
 		assertNotNull(uman1);
-		u1= new Uzytkownik("Wiktor", "Korczens");
-		u2= new Uzytkownik("Roman", "Amber");
-		u3= new Uzytkownik("Olaf", "Jazdza");
+		
+		
 
 	}
 
 	@Test
 	public void testDodajUrzytkownik() {
-		uman1.DodajUrzytkownik(u1);
-		uman1.DodajUrzytkownik(u3);
+		uman1.UsunWszystkichUrzytkownikow();
+		uman1.DodajUrzytkownik(u1);		
 		uman1.DodajUrzytkownik(u2);
-        
+		assertEquals(2, uman1.PobierzUrzytkownikow().size());
+		assertSame("Wiktor",u1.getImie());
+		assertSame("Amber",u2.getNazwisko());
+		Uzytkownik u4 = new Uzytkownik("Mariusz","Puchalke");
+		uman1.DodajUrzytkownik(u4);
+		assertEquals(3, uman1.PobierzUrzytkownikow().size());
+		assertSame("Puchalke",u4.getNazwisko());
+		
+		
+		
 	}
 
 	@Test
-	public void testPobierzOsoby() {
-		fail("Not yet implemented");
+	public void testPobierzUrzytkownikow() {
+		uman1.UsunWszystkichUrzytkownikow();
+		uman1.DodajUrzytkownik(u1);
+		uman1.DodajUrzytkownik(u3);
+		uman1.DodajUrzytkownik(u2);
+		
+		assertEquals(3, uman1.PobierzUrzytkownikow().size());
+		Uzytkownik u4 = new Uzytkownik("Mariusz","Puchalke");
+		uman1.DodajUrzytkownik(u4);
+		
+		assertEquals(4, uman1.PobierzUrzytkownikow().size());
 	}
 
+	
+	
+	
 	@Test
 	public void testZnajdzUrzytkownik() {
 		fail("Not yet implemented");
 	}
 
+	
+	
 	@Test
 	public void testUsunUrzytkownik() {
 		fail("Not yet implemented");
