@@ -37,7 +37,7 @@ public class UrzytkownikDBManagerTest {
 		uman1.DodajUrzytkownik(u1);
 		uman1.DodajUrzytkownik(u3);
 		uman1.DodajUrzytkownik(u2);
-        AssertEqals(3,uman1.)
+        
 	}
 
 	@Test
